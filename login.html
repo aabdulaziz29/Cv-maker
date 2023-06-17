@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in</title>
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <div class="registration">
+      <header class="reg__header">
+        <div class="container">
+          <a href="./index.html" class="logo">Hexagon</a>
+        </div>
+      </header>
+      <div class="reg__wrap">
+        <form>
+          <input
+            required
+            type="text"
+            class="username text"
+            placeholder="Username"
+          />
+          <input
+            required
+            type="password"
+            class="password text"
+            placeholder="Password"
+          />
+          <div class="checkbox">
+            <input type="checkbox" id="rememberMe" />
+            <label for="rememberMe">Remember me</label>
+          </div>
+          <button class="submit">Submit</button>
+          <a href="./registration.html">I don't have an account</a>
+          <p class="result"></p>
+        </form>
+      </div>
+    </div>
+    <script src="./js/login.js"></script>
+  </body>
+</html>
