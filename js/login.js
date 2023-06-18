@@ -1,6 +1,8 @@
 const form = document.querySelector("form");
 const rememberMe = document.querySelector("#rememberMe");
+const eye = document.querySelector(".fa-eye");
 let user = JSON.parse(localStorage.getItem("userdata"));
+const password2 = document.querySelector(".password");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -22,4 +24,12 @@ form.addEventListener("submit", (e) => {
   } else {
     result.textContent = "Incorrect login or password!";
   }
+});
+eye.addEventListener("mousedown", () => {
+  password2.setAttribute("type", "text");
+  console.log(password2.getAttribute("type"));
+});
+eye.addEventListener("mouseup", () => {
+  password2.setAttribute("type", "password");
+  console.log(password2.getAttribute("type"));
 });
