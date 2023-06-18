@@ -148,8 +148,25 @@
     }
   }
   img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border: 1px solid rgba(128, 128, 128, 0.281);
   }
+}
+.project {
+  width: 250px;
+  height: 250px;
+  font-size: 25px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid gray;
+  color: blueviolet;
+  font-weight: 700;
+  background-size: contain;
+  background-position: center;
+  color: rgb(0, 110, 255);
+  background-repeat: no-repeat;
 }

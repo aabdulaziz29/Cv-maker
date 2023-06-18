@@ -9,11 +9,11 @@ form.addEventListener("submit", (e) => {
     username: username,
     email: email,
     password: password,
+    rememberMe: false,
   };
 
   const json = JSON.stringify(user);
   localStorage.setItem("userdata", json);
   console.log("added");
-
   location.href = "../projects.html";
 });

@@ -1,42 +1,22 @@
-// from
-const newProjectForm = document.querySelector(".new__project form");
-
-// inputs
-const inputImg = document.querySelector(".img");
-const inputName = document.querySelector(".name");
-const inputJob = document.querySelector(".job");
-const inputDate = document.querySelector(".date");
-const inputDescription = document.querySelector(".description");
-
-// results
-
-const resultImg = document.querySelector(".new__project-img");
-const resultName = document.querySelector(".new__project-name");
-const resultJob = document.querySelector(".new__project-job");
-const resultDate = document.querySelector(".new__project-date");
-const resultDescription = document.querySelector(".new__project-about");
-
-inputImg.addEventListener("input", () => {
-  resultImg.src = inputImg.value;
+const wrapper = document.querySelector(".add__project-wrap");
+const username = document.querySelector(".username");
+const logOut = document.querySelector(".log__out");
+const deleteAcc = document.querySelector(".delete");
+let data = JSON.parse(localStorage.getItem("project"));
+let data2 = JSON.parse(localStorage.getItem("userdata"));
+username.textContent = data2.username;
+if (!localStorage.getItem("project")) {
+  localStorage.setItem("project", "[]");
+}
+data.forEach((item) => {
+  let card = `
+      <div class="project" style="background-image:url(${item.img});">${item.title}</div>`;
+  wrapper.insertAdjacentHTML("beforeend", card);
 });
-
-inputName.addEventListener("input", () => {
-  resultName.textContent = inputName.value;
+logOut.addEventListener("click", () => {
+  location.href = "./index.html";
 });
-
-inputJob.addEventListener("input", () => {
-  resultJob.textContent = inputJob.value;
+deleteAcc.addEventListener("click", () => {
+  location.href = "../index.html";
+  localStorage.clear();
 });
-
-inputDate.addEventListener("input", () => {
-  resultDate.textContent = inputDate.value;
-});
-
-inputDescription.addEventListener("input", () => {
-  resultDescription.textContent = inputDescription.value;
-});
-
-
-newProjectForm.addEventListener("submit", () =>{
-    
-})

@@ -32,14 +32,16 @@ button {
 .header {
   background-color: #fff;
   padding: 16px 0;
-  a {
+  .create {
     font-weight: 500;
     color: blueviolet;
+    cursor: pointer;
   }
 }
 .logo {
   font-size: 40px;
   font-weight: 600;
+  color: blueviolet;
 }
 
 .hero {
